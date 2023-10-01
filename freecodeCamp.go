@@ -326,7 +326,6 @@
 // 	fmt.Printf("Value is %v and type is %T \n", imag(complexNum), imag(complexNum))
 // }
 
-
 //Complax define another way
 // package main
 
@@ -338,9 +337,6 @@
 // 	var complexNum = complex(12, 2)
 // 	fmt.Printf("Value is %v and type is %T \n", complexNum, complexNum)
 // }
-
-
-
 
 //Text data-type (string and rune)
 
@@ -355,9 +351,8 @@
 // 	fmt.Printf("Value is: %s, Type is: %T", str1, str1)
 // }
 
-
 // we can treat string as an array
-// It will return ASCII value of the character. 
+// It will return ASCII value of the character.
 // package main
 
 // import "fmt"
@@ -366,7 +361,6 @@
 // 	var str1 string= "This is String"
 // 	fmt.Printf("Value is: %v, Type is: %T", str1[5], str1[5])
 // }
-
 
 // If we want to get character we need to do explicit conversion to string
 // package main
@@ -377,7 +371,6 @@
 // 	var str1 string= "This is String"
 // 	fmt.Printf("Value is: %v, Type is: %T", string(str1[5]), string(str1[5]))
 // }
-
 
 // string concatination
 // We can do one Arithmetic operation on string which is concatination
@@ -391,7 +384,6 @@
 // 	fmt.Printf("Value is: %v, Type is: %T", str1 + str2, str1 + str2)
 // }
 
-
 // we can convert string into collection of bytes or array of bytes
 // package main
 
@@ -402,7 +394,6 @@
 // 	var byteConversion = []byte(str1)
 // 	fmt.Printf("Value is: %v, Type is: %T \n", byteConversion, byteConversion)
 // }
-
 
 //rune
 // it is similar to char data type in java but in Go rune is int32
@@ -423,7 +414,6 @@
 // 	fmt.Printf("Value is: %v, Type is: %T \n", runeVal1, runeVal1)
 // }
 
-
 // Mix-type and multiple variable declaration in one line
 // package main
 
@@ -437,9 +427,6 @@
 // 	fmt.Printf("Value is: %v, Type is: %T \n", d, d)
 // 	fmt.Printf("Value is: %v, Type is: %T \n", e, e)
 // }
-
-
-
 
 // constants
 // Naming of constants : to define constant we need to write const instead of var keyword
@@ -455,7 +442,6 @@
 // 	fmt.Printf("Value is: %v, Type is: %T \n", constVal, constVal)
 // }
 
-
 // we can declare constant value at compile time only
 // we can not declare value to constant type which is evaluated at run time
 // package main
@@ -466,11 +452,10 @@
 // )
 
 // func main(){
-// 	const x = math.Sqrt(4) // it is calculated at run-time, we can not store it in constant type, we can store it in var type only, otherwise it will give error 
+// 	const x = math.Sqrt(4) // it is calculated at run-time, we can not store it in constant type, we can store it in var type only, otherwise it will give error
 // 	fmt.Printf("Value is: %v, Type is: %T \n", x, x)
 
 // }
-
 
 // constant can take all premitive-type values
 //we can not declare an array as constant type it will be always var type because arrays are mutable (collections are mutable)
@@ -492,7 +477,6 @@
 
 // }
 
-
 // constant shadowing
 // when we declare a constant with the same name in package and local level
 // Preference will be given to the local always
@@ -507,7 +491,6 @@
 // 	fmt.Printf("Value is: %v, Type is: %T \n", a, a)
 // }
 
-
 // we can perform mathematical operations between const and var (type should be same) result will be var only
 // package main
 
@@ -518,7 +501,6 @@
 // 	var b int = 30
 // 	fmt.Printf("Value is: %v, Type is: %T \n", a+b, a+b)
 // }
-
 
 // implicit conversion happen for int type in const while performing arithmetic operation with var type result will be var type
 // package main
@@ -531,10 +513,9 @@
 // 	fmt.Printf("Value is: %v, Type is: %T \n", a+b, a+b) // result type will be int16 (because of var type) but not for (const a int = 20)
 // }
 
-
 // Enumaration constant iota in Go
-// iota value is always 0 and type is int 
-// we need to initiate iota value with _ (underscore), its write only not read or use 
+// iota value is always 0 and type is int
+// we need to initiate iota value with _ (underscore), its write only not read or use
 // When we want to increase adjacent constant by 1 then we declare first constant with iota in constant block in package level
 // package main
 
@@ -555,7 +536,6 @@
 // fmt.Printf("value: %v, Type: %T \n", d, d)
 // }
 
-
 // package main
 
 // import "fmt"
@@ -569,11 +549,10 @@
 // )
 
 // func main(){
-// 	var vehicle int = car 
+// 	var vehicle int = car
 // 	fmt.Printf("value: %v, Type: %T \n", vehicle==car, vehicle==car)		// 1==1
 // 	fmt.Printf("value: %v, Type: %T \n", vehicle==jeep, vehicle==jeep)		// 1==3
 // }
-
 
 // value of iota increases inside one constant block, if we will take another constant block then value will be re-initialize
 // package main
@@ -592,9 +571,8 @@
 
 // func main(){
 // 	fmt.Printf("value: %v, Type: %T \n", a1, a1)
-// 	fmt.Printf("value: %v, Type: %T \n", a2, a2)		
+// 	fmt.Printf("value: %v, Type: %T \n", a2, a2)
 // }
-
 
 //if we want to skip the increment value then write _ (underscore) there
 // package main
@@ -614,7 +592,6 @@
 // 	fmt.Println(a, b, c, d)		// 1 2 3 5 (4 will be skipped from here)
 // }
 
-
 // we can perform arithmetic operation on iota it will get applied on all the adjecent constant inside constant block
 //  package main
 
@@ -624,14 +601,13 @@
 // 	_ = iota + 5	//0 + 5
 // 	a			//1 + 5
 // 	b			//2 + 5
-// 	c			//3	+ 5		
+// 	c			//3	+ 5
 // 	d			//4 + 5
 // )
 
 // func main(){
-// 	fmt.Println(a, b, c, d)		
+// 	fmt.Println(a, b, c, d)
 // }
-
 
 // we can perform bitwise and bit shifting operation
 //  package main
@@ -642,15 +618,14 @@
 // 	_ = iota << 2	//0 << 2
 // 	a			//1 << 2
 // 	b			//2 << 2
-// 	c			//3	<< 2		
+// 	c			//3	<< 2
 // 	d			//4 << 2
 // )
 
 // func main(){
-// 	fmt.Printf("Value: %v, Type: %T \n", a,a)	
-// 	fmt.Println(a,b,c,d)	
+// 	fmt.Printf("Value: %v, Type: %T \n", a,a)
+// 	fmt.Println(a,b,c,d)
 // }
-
 
 // converting memory from Byte to GB
 // package main
@@ -658,51 +633,47 @@
 // import "fmt"
 
 // const(
-// 	_ = iota 	
-// 	KB = 1 << (10 * iota)	// 1 * 2^(10*1)		
+// 	_ = iota
+// 	KB = 1 << (10 * iota)	// 1 * 2^(10*1)
 // 	MB						// 2 * 2^(10*2)
-// 	GB						// 3 * 2^(10*3)		
+// 	GB						// 3 * 2^(10*3)
 // 	TB
-// 	PB	
+// 	PB
 // 	EB
 // 	ZB
-// 	YB		
+// 	YB
 // )
 
 // func main(){
 // 	memoryInBytes := 4000000000.0
-// 	fmt.Printf("Value after converted to GB is : %.2f GB \n",memoryInBytes/GB )	
+// 	fmt.Printf("Value after converted to GB is : %.2f GB \n",memoryInBytes/GB )
 // 	fmt.Println(KB)
 // }
 
-
-// storing boolean flag inside 1 byte 
+// storing boolean flag inside 1 byte
 // package main
 
 // import "fmt"
 
-// const(	
-// 	isAdmin = 1 << iota	
-// 	isHeadquarters						
-// 	canSeeFinancials							
+// const(
+// 	isAdmin = 1 << iota
+// 	isHeadquarters
+// 	canSeeFinancials
 
-// 	canSeeAfrica	
+// 	canSeeAfrica
 // 	canSeeAsia
 // 	canSeeEurope
 // 	canSeeNorthAmerica
-// 	canSeeSouthAmerica		
+// 	canSeeSouthAmerica
 // )
 
 // func main(){
-// 	var roles byte = isAdmin | canSeeFinancials | canSeeEurope 	//this way we can store so much boolean flag value in 1 byte(uint8) 
+// 	var roles byte = isAdmin | canSeeFinancials | canSeeEurope 	//this way we can store so much boolean flag value in 1 byte(uint8)
 // 	fmt.Printf("Value is : %b, Type is : %T \n", roles, roles)
-	
+
 // 	fmt.Printf("Can see Financials? %v \n", canSeeFinancials & roles == canSeeFinancials) // roles has financial access
 // 	fmt.Printf("Can see Africa? %v \n", canSeeAfrica & roles == canSeeAfrica) // roles doesnot has Africa access
 // }
-
-
-
 
 //Collection(Arrays, Slices)
 
@@ -720,10 +691,9 @@
 
 // func main(){
 // 	// grades := []int {58, 34, 68, 100}
-// 	grades := [...]int{58, 34, 68, 100} // in this way size will be taken automatically on the basis of number of elements provided 
+// 	grades := [...]int{58, 34, 68, 100} // in this way size will be taken automatically on the basis of number of elements provided
 // 	fmt.Printf("Students Grades are : %v", grades)
 // }
-
 
 // empty Array declaration for furthur use, for int value it will initialize with default value which is 0 for string empty
 // package main
@@ -736,7 +706,6 @@
 // 	fmt.Println(emptyIntArray)  // [0 0 0 0]
 // 	fmt.Println(emptyStringArray)  // [   ] -> four spaces
 // }
-
 
 //we can store values in array into particular index
 // package main
@@ -754,7 +723,6 @@
 // 	fmt.Println("After Storing values in array: ",stringArray)
 // }
 
-
 // we can get particular indexed value assigned in the array
 // package main
 
@@ -770,7 +738,6 @@
 // 	fmt.Println("Getting value from array present at 2nd index: ",stringArray[2])
 // }
 
-
 // getting size of the arrayusing len(array) function
 // package main
 
@@ -782,7 +749,6 @@
 // 	fmt.Println("length of the array is: ",len(stringArray))
 // }
 
-
 // Array of Arrays(Multi-dimensional Array)
 // package main
 
@@ -793,7 +759,6 @@
 // 	fmt.Println(identityMatrix)
 // }
 
-
 //Array of Arrays(Multi-dimensional Array) .....another way initializing each row individually
 // package main
 
@@ -801,12 +766,11 @@
 
 // func main(){
 // 	var identityMatrix [3][3]int
-// 	identityMatrix[0] = [3]int{1,2,3} 
-// 	identityMatrix[1] = [3]int{4,5,6} 
-// 	identityMatrix[2] = [3]int{7,8,9} 
+// 	identityMatrix[0] = [3]int{1,2,3}
+// 	identityMatrix[1] = [3]int{4,5,6}
+// 	identityMatrix[2] = [3]int{7,8,9}
 // 	fmt.Println(identityMatrix)
 // }
-
 
 // Arrays do not pointing same Array in Go if we assign it to any other array, it will create a copy of same array and give to another Array
 // package main
@@ -821,7 +785,6 @@
 // 	fmt.Println(arr2) // [1,5,3]
 // }
 
-
 // If we want to pointing arr2 to same arr1 then we need to use pointer
 // package main
 
@@ -834,9 +797,6 @@
 // 	fmt.Println(arr1) // [1,5,3]
 // 	fmt.Println(arr2) // [1,5,3]
 // }
-
-
-
 
 // Slice
 // we do not need to define size of Slice, it will take automatically(it can increase and decrease size based on the element provided to slice)
@@ -851,7 +811,6 @@
 // 	fmt.Println(cap(slice1))
 // }
 
-
 // If we will assign one slice to another slice then both will point to same slice, it will not create copy
 // package main
 
@@ -864,7 +823,6 @@
 // 	fmt.Println(slice1)
 // 	fmt.Println(slice2)
 // }
-
 
 // sub-slicing (we can perform slicing on array as-well)
 // package main
@@ -884,7 +842,6 @@
 // 	fmt.Println(slice3)
 // 	fmt.Println(slice4)
 // }
-
 
 // package main
 
@@ -906,7 +863,6 @@
 // 	fmt.Println(slice4)
 // }
 
-
 //we can use make() function to create slice
 // It will take 2 or three arguments
 // creating slice with using 2 arguments make(type, size)
@@ -915,12 +871,11 @@
 // import "fmt"
 
 // func main(){
-// slice1 := make([]int, 4) 
+// slice1 := make([]int, 4)
 // fmt.Println(slice1)
 // fmt.Println(len(slice1))
 // fmt.Println(cap(slice1))
 // }
-
 
 // creating slice with using 3 arguments make(type, size, capacity)
 // we can also define the capacity using 3rd argument which is capacity
@@ -935,9 +890,8 @@
 // fmt.Println(cap(slice1))
 // }
 
-
-// we can create a zero capacity slice then we can append elements 
-// (but it will not append in the same slice, 
+// we can create a zero capacity slice then we can append elements
+// (but it will not append in the same slice,
 //	 it will internally create bigger size slice and copy all element to the bigger sized slice)
 // if there is lakhs of elements then this can be serious problem to performance of application.
 // Better way is to define the capacity at beginning if we know in advance
@@ -953,8 +907,7 @@
 // fmt.Println(cap(slice1))
 // }
 
-
-// we can append 1 or more element 
+// we can append 1 or more element
 // package main
 
 // import "fmt"
@@ -967,7 +920,6 @@
 // fmt.Println(cap(slice1))
 // }
 
-
 // we can concatinate two slices to one using spread operator(...)
 // package main
 
@@ -976,12 +928,11 @@
 // func main(){
 // slice1 := []int{1,2,3}
 // slice2 := []int{4,5,6}
-// slice1 = append(slice1, slice2...)	// appending slice2 to slice1 
+// slice1 = append(slice1, slice2...)	// appending slice2 to slice1
 // fmt.Println(slice1)
 // fmt.Println(len(slice1))
 // fmt.Println(cap(slice1))
 // }
-
 
 //we can remove elements in between of the slice
 // package main
@@ -996,9 +947,7 @@
 // fmt.Println(cap(slice1))
 // }
 
-
-
-// Maps and Structs 
+// Maps and Structs
 
 // Maps (It is a key value collection)
 // package main
@@ -1018,7 +967,6 @@
 
 // 	fmt.Println(cityPopulation)
 // }
-
 
 //--------------------------------------or-----------------------------
 // package main
@@ -1040,7 +988,6 @@
 // 	fmt.Println(cityPopulation)
 // }
 
-
 //getting the individual elements from map using its key
 // package main
 
@@ -1056,11 +1003,10 @@
 // 		"Blr" : 500000,
 // 		"Chennai" : 700000,
 // 	}
-	
+
 // 	fmt.Println(cityPopulation)
 // 	fmt.Println("Population of Mumbai is:",cityPopulation["Mumbai"])
 // }
-
 
 //adding new values in map
 // In map order is not preserved
@@ -1083,7 +1029,6 @@
 // 	fmt.Println(cityPopulation)
 // }
 
-
 //deleting element from map using delete() method
 // package main
 
@@ -1100,15 +1045,14 @@
 // 		"Chennai" : 700000,
 // 	}
 
-// 	delete(cityPopulation, "Hyd") // to delete we need to provide map name and any key which we want to delete 
+// 	delete(cityPopulation, "Hyd") // to delete we need to provide map name and any key which we want to delete
 // 	fmt.Println(cityPopulation)
 // }
-
 
 // If we are checking for the key which is non present in the map it will return value 0, it may create confusion
 // to get rid of this problem we use pop and ok,
 // if we get ok value as false and pop value as 0, it means key is not present in the map,
-// if we get ok value as true and pop value as 0 then key present with n0 value in the map 
+// if we get ok value as true and pop value as 0 then key present with n0 value in the map
 // package main
 
 // import "fmt"
@@ -1130,4 +1074,296 @@
 // 	fmt.Println(cityPopulation)
 // 	fmt.Println(pop1, ok1) // it will print 0 false so "Patna" key is not present in the map
 // 	fmt.Println(pop2, ok2) // it will print 0 true so "Kolkata" key is present in the map and its population is 0
+// }
+
+//if we just want to check if the Entry is present in the map or not then we can use _(Skip variable) at first place
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	cityPopulation := map[string]int{
+
+// 		"Delhi" : 200000,
+// 		"Mumbai" : 800000,
+// 		"Hyd" : 600000,
+// 		"Blr" : 500000,
+// 		"Chennai" : 700000,
+// 		"Kolkata" : 0,
+// 	}
+
+// 	_, ok := cityPopulation["Kolkata"] // UnderScore is used to skip the value and ok will just check if Kolkata is present or not
+// 	fmt.Println(ok)
+// }
+
+//We can use len() method to find the numbers of entry present in the map
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	cityPopulation := map[string]int{
+
+// 		"Delhi" : 200000,
+// 		"Mumbai" : 800000,
+// 		"Hyd" : 600000,
+// 		"Blr" : 500000,
+// 		"Chennai" : 700000,
+// 		"Kolkata" : 0,
+// 	}
+// 	fmt.Println(len(cityPopulation))
+// }
+
+// Manipulating map in one place will effect in everywhere
+// when we store original map in another variable and we manipulate that variable it will reflact manipulation on Original map also
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	cityPopulation := map[string]int{
+
+// 		"Delhi" : 200000,
+// 		"Mumbai" : 800000,
+// 		"Hyd" : 600000,
+// 		"Blr" : 500000,
+// 		"Chennai" : 700000,
+// 		"Kolkata" : 0,
+// 	}
+// 	cityPopulationCopy := cityPopulation // copying original map entries to another variable
+// 	delete(cityPopulationCopy, "Hyd")	// deleting "Hyd" from cityPopulationCopy will delete "Hyd" from  cityPopulation also
+// 	fmt.Println(cityPopulation)
+// }
+
+//--------------------------------------------struct-------------------------------------------------------
+// we can use multiple data-types variables in structs
+// all other object type stores only one type of data(array and slice, map key is one type only)
+// struct gather the related information togather (eg: information of Animal)
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	name string
+// 	canFly bool
+// 	canRun bool
+// 	numbersOfLegs int
+// 	features []string
+// }
+
+// func main(){
+
+// 	animal1 := Animal{
+// 		name : "Tiger",
+// 		canFly : false,
+// 		canRun : true,
+// 		numbersOfLegs : 4,
+// 		features : []string{"Very Fast", "Very Strong", "Eat Meat Only", "Lives in Jungle only"},
+// 	}
+// 	fmt.Println("Identity Of animal1 : %v \n", animal1) // %v will print values only
+// 	fmt.Printf("Identity Of animal1 : %+v \n", animal1) // %+v will print Key as well as values(readability improved)
+// }
+
+//we can get one particular value from struct using dot(.)
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	name string
+// 	canFly bool
+// 	canRun bool
+// 	numbersOfLegs int
+// 	features []string
+// }
+
+// func main(){
+
+// 	animal1 := Animal{
+// 		name : "Tiger",
+// 		canFly : false,
+// 		canRun : true,
+// 		numbersOfLegs : 4,
+// 		features : []string{"Very Strong", "Very Fast", "Eat Meat Only", "Lives in Jungle only"},
+// 	}
+// 	fmt.Printf("name of animal1 is : %v \n", animal1.name)
+// 	fmt.Printf("first feature of animal1 is : %v \n", animal1.features[0])
+// }
+
+//Another way to define struct is without field-name of struct but we need to provide values in exact same order
+// It is not recomended because in future if we change the field name, it may throw error or can retrieve value of another field
+// without field name initializer order in main function for struct should be same as we used while creation of struct
+// with field name order can be different it does not create any problem
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	name string
+// 	canFly bool
+// 	canRun bool
+// 	numbersOfLegs int
+// 	features []string
+// }
+
+// func main(){
+
+// 	animal1 := Animal{
+// 		"Tiger",
+// 		false,
+// 		true,
+// 		4,
+// 		[]string{"Very Strong", "Very Fast", "Eat Meat Only", "Lives in Jungle only"},
+// 	}
+// 	fmt.Printf("details of animal1 is : %+v \n", animal1)
+// }
+
+// to export struct to another package we needs to declare fields names in Pascal case
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	Name string
+// 	CanFly bool
+// 	CanRun bool
+// 	NumbersOfLegs int
+// 	Features []string
+// }
+
+// func main(){
+
+// 	animal1 := Animal{
+// 		Name : "Tiger",
+// 		CanFly : false,
+// 		CanRun : true,
+// 		NumbersOfLegs : 4,
+// 		Features : []string{"Very Strong", "Very Fast", "Eat Meat Only", "Lives in Jungle only"},
+// 	}
+// 	fmt.Printf("details of animal1 is : %+v \n", animal1)
+// }
+
+//Declaring anonymous structs (very few use)
+// we can not use anonymous struct anywhere else
+// two pairs of {defining struct}{initializing struct fields}
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	person1 := struct{name string}{name : "Ajeet"}
+// 	fmt.Printf("name of person1 is : %v \n", person1.name)
+// }
+
+//unlike map and slices, structs are independent datatype
+// if any struct refer to the original struct, changes made in second struct not reflect in original struct
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	person1 := struct{name string}{name : "Ajeet"}
+// 	person2 := person1
+// 	person2.name = "Raman"
+// 	fmt.Printf("name of person1 is : %v \n", person1.name) // Ajeet
+// 	fmt.Printf("name of person2 is : %v \n", person2.name)  // Raman
+// }
+
+// if we will use pointer thenn changes in copied structs will reflact in original structs
+// package main
+
+// import "fmt"
+
+// func main(){
+
+// 	person1 := struct{name string}{name : "Ajeet"}
+// 	person2 := &person1
+// 	person2.name = "Raman"
+// 	fmt.Printf("name of person1 is : %v \n", person1.name) //Raman
+// 	fmt.Printf("name of person2 is : %v \n", person2.name)  // Raman
+// }
+
+// Embading
+//In Go does not have Inheritance or IS-A relationship it has HAS-A relationship
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	Name string
+// 	Origin string
+// }
+
+// type Bird struct{
+// 	Animal				// Bird and Animal are totally different things
+// 						// (by embading Animal in Bird we can say Bird can have Animal like characteristics)
+// 						// embading Animal struct into Bird struct
+// 	SpeedKPH float32
+// 	CanFly bool
+// }
+
+// func main(){
+
+// 	bird1 := Bird{}
+// 	bird1.Name ="Emu"
+// 	bird1.Origin = "Australia" // in Bird struct we dont have Name and Origin field but due to embading we can use fields in Bird
+// 	bird1.SpeedKPH = 48.9
+// 	bird1.CanFly = false
+
+// 	fmt.Println(bird1)
+// 	fmt.Println(bird1.Name)
+// }
+
+//--------------------------------------------------or-------------------------------
+// package main
+
+// import "fmt"
+
+// type Animal struct{
+// 	Name string
+// 	Origin string
+// }
+
+// type Bird struct{
+// 	Animal
+// 	SpeedKPH float32
+// 	CanFly bool
+// }
+
+// func main(){
+
+// 	bird1 := Bird{
+// 		Animal: Animal{Name : "Emu", Origin: "Australia"},
+// 		SpeedKPH : 48.9,
+// 		CanFly : false,
+// 	}
+
+// 	fmt.Println(bird1)
+// 	fmt.Println(bird1.Name)
+// }
+
+// tag concept in struct(for validation reason eg: name should be maximum of 100 characters) for tag use back tick
+// this example is meaningless just for understanding purpose (main use for validation purpose)
+// package main
+
+// import (
+// 	"fmt"
+// 	"reflect"
+// )
+
+// type Animal struct{
+// 	Name string `required max: "100"`
+// }
+
+// func main(){
+
+// 	t := reflect.TypeOf(Animal{})
+// 	field, _ := t.FieldByName("Name")
+// 	fmt.Println(field.Tag)
+
 // }
